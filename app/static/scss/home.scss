@@ -1,0 +1,113 @@
+html {
+    height: 100%;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    // background-image: linear-gradient(to bottom right, lightblue, rgb(91, 230, 230));
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    height: 100px;
+    background-color: #FEE600;
+
+    img {
+        height: 70px;
+        margin-left: 50px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        float: left;
+    }
+
+    h1 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 40px;
+        float: left;
+    }
+
+    .nav-right {
+        display: none;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+        a {
+            margin-right: 40px;
+        }
+
+        p {
+            margin-top: 1rem;
+            margin-right: 40px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+
+
+    /* Style navigation menu links */
+    #hamburger {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        background: black;
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 25px;
+        height: 50px;
+        margin-right: 20px;
+        
+    }
+
+    
+    /* Add a grey background color on mouse-over */
+    a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+}
+
+#myLinks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    a,p {
+        color: black;
+        background-color: #888;
+        padding: 14px 16px;
+        height: 50px;
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    a {
+        background-color: rgb(228, 148, 148);
+    }
+
+    a:hover {
+        background-color: rgb(185, 185, 185);
+    }
+}  
+
+.pull-right {
+    float: right;
+}
+
+
+#chart {
+    position: relative;
+    height: 50%;
+    width: 90%;
+    background-color: white;
+    padding: 10px;
+}
