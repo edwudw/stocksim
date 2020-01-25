@@ -10,45 +10,34 @@ function showMenus() {
     }
 }
 
+var testVar = 'Mon';
+
+function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+        [testVar, 20, 28, 38, 45],
+        ['Tue', 31, 38, 55, 66],
+        ['Wed', 50, 55, 77, 80],
+        ['Thu', 77, 77, 66, 50],
+        ['Fri', 68, 66, 22, 15]
+        // Treat first row as data as well.
+    ], true);
+
+    var options = {
+    legend:'none'
+    };
+
+    var chart = new google.visualization.CandlestickChart(document.getElementById('chart'));
+
+    chart.draw(data, options);
+}
+
 function setupChart() {
-    var ctx = document.getElementById('main-chart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        responsive: true,
-        data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
-        }
-    });
+    // Load the Visualization API and the corechart package.
+    google.charts.load('current', {'packages':['corechart']});
+
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.charts.setOnLoadCallback(drawChart);
+    
 }
 
 $(document).ready(function () {

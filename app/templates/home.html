@@ -3,7 +3,7 @@
 {% block css %}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/home.css') }}">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript"
          src="{{ url_for('static', filename='js/home.js') }}"></script>
 {% endblock %}
@@ -22,15 +22,32 @@
         <i class="fa fa-bars"></i>
     </a>
 </nav>
+<div class="stock-header">
+    <h1 id="stock-title">ASX:JBH</h1>
+    <h1>Balance: $10000</h1>
+</div>
+
 <div id="myLinks">
     <p>{{email}}</p>
     <a href="/logout">Logout</a>
 </div>
-<div id="chartParent">
+
+
+<div class="chart-info">
     <div id="chart">
-        <canvas id="main-chart"></canvas>
+    </div>
+    <div id="list-of-stocks">
+        <h3>My shares</h3>
+        <ul class="list-group">
+            <li class="list-group-item"><b>1</b> BHP</li>
+            <li class="list-group-item"><b>2</b> JBH</li>
+            <li class="list-group-item"><b>6</b> CBA</li>
+            <li class="list-group-item"><b>4</b> WOW</li>
+            <li class="list-group-item"><b>10</b> NAB</li>
+        </ul>
     </div>
 </div>
+
 
 
 {% endblock %}
