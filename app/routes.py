@@ -66,3 +66,8 @@ def logout():
 @login_required
 def home():
     return render_template('home.html', email=current_user.get_id())
+
+@app.route('/transfer', methods=['GET'])
+@login_required
+def transfer():
+    return render_template('transfer.html', email=current_user.get_id())

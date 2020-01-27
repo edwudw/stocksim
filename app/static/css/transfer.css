@@ -36,8 +36,10 @@ nav .nav-left h1 {
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 40px;
+  cursor: pointer;
 }
 nav .nav-left a {
+  background-color: #e6cf07;
   height: 100px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -101,36 +103,7 @@ nav a:hover {
   background-color: #b9b9b9;
 }
 
-.chart-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.chart-info #chart {
-  position: relative;
-  height: 100%;
-  width: 60%;
-  max-width: 500px;
-  background-color: white;
-  -webkit-box-shadow: 0 0 10px #888;
-  box-shadow: 0 0 10px #888;
-  border-radius: 3px;
-  margin-left: 3%;
-}
-.chart-info #list-of-stocks {
-  margin-right: 3%;
-  width: 35%;
-}
-.chart-info #list-of-stocks ul {
-  -webkit-box-shadow: 0 0 10px #888;
-  box-shadow: 0 0 10px #888;
-  border-radius: 3px;
-}
-
 .stock-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   margin-top: 5%;
   margin-left: 3%;
   margin-right: 3%;
@@ -141,27 +114,15 @@ b {
   font-size: 20px;
 }
 
-.enter-code {
-  display: flex;
-  flex-direction: row;
+.transfer-form {
   background-color: white;
+  width: 50%;
+  padding: 5%;
   -webkit-box-shadow: 0 0 10px #888;
   box-shadow: 0 0 10px #888;
   border-radius: 3px;
-  width: 50%;
-  align-items: center;
-  margin-left: 3%;
-  padding: 1%;
-  margin-top: 3%;
-  margin-bottom: 3%;
-}
-.enter-code h6 {
-  margin-top: 0.5rem;
-}
-.enter-code input {
-  width: 40%;
-  margin-left: 3%;
-  margin-right: 3%;
+  margin-bottom: 10%;
+  margin: 0 auto;
 }
 
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=transfer.css.map */

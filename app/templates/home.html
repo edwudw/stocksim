@@ -12,8 +12,11 @@
 
 {% block content %}
 <nav id="navbar">
-    <img src="{{ url_for('static',filename='logo.png') }}" alt="StockSim Logo">
-    <h1>StockSim</h1>
+    <div class="nav-left">
+        <img src="{{ url_for('static',filename='logo.png') }}" alt="StockSim Logo">
+        <h1>StockSim</h1>
+        <a href="/transfer">Buy/Sell Shares</a>
+    </div>
     <div class="pull-right nav-right">
         <p>{{email}}</p>
         <a href='/logout' class='btn btn-primary'>Logout</a>
@@ -23,7 +26,7 @@
     </a>
 </nav>
 <div class="stock-header">
-    <h1 id="stock-title">ASX:JBH</h1>
+    <h1 id="stock-title">ASX:CBA</h1>
     <h1>Balance: $10000</h1>
 </div>
 
@@ -46,6 +49,12 @@
             <li class="list-group-item"><b>10</b> NAB</li>
         </ul>
     </div>
+</div>
+
+<div class="enter-code">
+    <h6>Enter ASX code: </h6>
+    <input id="stock-code-input" class="form-control" type="text" placeholder="Eg. CBA">
+    <button class="btn btn-primary" id="show-button">Show Chart</button>
 </div>
 
 
